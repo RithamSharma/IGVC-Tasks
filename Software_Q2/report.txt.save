@@ -1,19 +1,21 @@
-**Report on Lane Marking Extraction and Highlighting**
+Report on Lane Marking Extraction and Highlighting
 
-**Introduction**
-I developed an image processing pipeline to extract and highlight white and yellow lane markings on highways. Using color thresholding, edge detection, and morphological operations, I was able to detect lanes and overlay them onto the original image.
+Introduction
+I developed an image processing pipeline to extract and highlight white and yellow lane markings on highways. Using color thresholding, edge detection, and morphological operations, 
+I was able to detect lanes and overlay them onto the original image.
 
-**Why This Approach?**
-I chose traditional image processing techniques because they are efficient, require no training data, and work well in controlled conditions. By combining color segmentation and edge detection, I ensured accurate lane detection without relying on deep learning.
+Why This Approach?
+I chose traditional image processing techniques because they are efficient, require no training data, and work well in controlled conditions. By combining color segmentation and 
+edge detection, I ensured accurate lane detection without relying on deep learning.
 
-**Methodology**
+Methodology
 
-1. **Image Preprocessing:**
+1. Image Preprocessing:
 
    - Converted the image to RGB for accurate color representation.
    - Defined a Region of Interest (ROI) to focus on the road and ignore irrelevant areas.
 
-2. **Color-Based Lane Detection:**
+2. Color-Based Lane Detection:
 
    - Used HSV color space for better segmentation.
    - Applied thresholding to detect:
@@ -21,36 +23,38 @@ I chose traditional image processing techniques because they are efficient, requ
      -  Yellow lanes: HSV range [20, 100, 100] to [35, 255, 255].
    - Applied an ROI mask to refine the extracted lanes.
 
-3. **Noise Reduction & Edge Detection:**
+3. Noise Reduction & Edge Detection:
 
    - Applied Gaussian blur to reduce noise.
    - Used Canny edge detection to find lane boundaries.
    - Performed morphological operations to close gaps in lane markings.
 
-4. **Contour Detection & Mask Creation:**
+4. Contour Detection & Mask Creation:
 
    - Extracted lane contours and removed small, irrelevant regions.
    - Created separate masks for white and yellow lanes.
 
-5. **Lane Highlighting on the Original Image:**
+5. Lane Highlighting on the Original Image:
 
    - Highlighted white lanes in magenta.
    - Highlighted yellow lanes in cyan.
    - Overlaid these onto the original image for clear visibility.
 
-6. **Visualization & Saving Results:**
+6. Visualization & Saving Results:
 
    - Displayed original, ROI, processed images, and binary masks.
    - Added a color legend for clarity.
    - Saved output images for reference.
 
-**Results & Output Files** `lane_detection_results.png`: Composite image with results.\
+Results & Output Files
+`lane_detection_results.png`: Composite image with results.\
  `white_lane_mask.png`: Binary mask for white lanes.\
 `yellow_lane_mask.png`: Binary mask for yellow lanes.\
 `processed_image.png`: Original image with highlighted lanes.\
 `roi_display.png`: Region of interest visualization.
 
-**Conclusion**
-This pipeline effectively detects lane markings using a simple yet powerful combination of traditional image processing techniques. It’s fast and doesn’t require training data, making it practical for real-world applications. Future improvements could include adaptive thresholding or machine learning for better performance under varying conditions. 🚀
+Conclusion
+This pipeline effectively detects lane markings using a simple yet powerful combination of traditional image processing techniques. It’s fast and doesn’t require training data, making 
+it practical for real-world applications. Future improvements could include adaptive thresholding or machine learning for better performance under varying conditions. 🚀
 
 
