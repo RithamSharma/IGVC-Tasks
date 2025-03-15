@@ -75,8 +75,3 @@ We will use 2 E type batteries in series and 2 of such connections in parallel t
 Also corresponding to this peak current drawable is 114 A and avg current drawable is 43.55*2=87A
 
 
-
-The connection will look something like this
-
-![WhatsApp Image 2025-03-12 at 9 25 05 PM](https://github.com/user-attachments/assets/a4b3a740-7d3f-41d2-8ef8-df63a2f81618)
-
